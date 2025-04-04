@@ -1,0 +1,15 @@
+# This file contains the information of the group members.
+
+- role: Our Team
+  members:
+    - name: "Wanda Hou"
+      profile_link: "https://www.linkedin.com/in/wanda-hou-986b61264/"
+      photo: "/assets/img/photos/WDHou.jpeg"
+      email: "hwanda@edencode.ai"
+
+    - name: "Yi-Zhuang You"
+      profile_link: "https://www.linkedin.com/in/yi-zhuang-you-1703a1272/"
+      photo: "/assets/img/photos/YZYou2.png"
+      email: "yzyou@edencode.ai"
+
+
