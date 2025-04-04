@@ -4,7 +4,7 @@ title: EdenCode Inc. # site's title
 
 # THEME-SPECIFIC CONFIGURATION
 title: EdenCode Inc.                                 # site's title
-description: "AI+Quantum"           # used by search engines
+description: "AI+Quantum"                            # used by search engines
 avatar: assets/img/logos/avatar.svg                     # Empty for no avatar in navbar
 favicon: assets/img/logos/avatar.svg                    # Icon displayed in the tab
 
