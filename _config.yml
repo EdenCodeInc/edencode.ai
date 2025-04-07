@@ -1,9 +1,8 @@
 # SITE CONFIGURATION
-url: "https://edencodeinc.github.io"
+url: "https://www.edencode.ai/"
 title: EdenCode Inc. # site's title
 
 # THEME-SPECIFIC CONFIGURATION
-title: EdenCode Inc.                                 # site's title
 description: "AI+Quantum"                            # used by search engines
 avatar: assets/img/logos/avatar.png                     # Empty for no avatar in navbar
 favicon: assets/img/logos/avatar.png                    # Icon displayed in the tab
