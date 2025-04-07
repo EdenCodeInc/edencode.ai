@@ -29,25 +29,27 @@ $x-sm-break: 240px;
 
 /* THEME COLOR SCHEMES */
 html, html[data-theme="light"] {
-  --background: #fff9d0;
-  --blockquote: #eef7fa;
-  --selection: #d4d4d4;
-  --meta: #595959;
-  --link: #337ab7;
+  --background: #FFF9D0;
+  --blockquote: #F4A135;
+  --selection: #EB612E;
+  --meta: #553128;
+  --link: #EB612E;
   --header-background: #000000;
-  --header-text: #ffffff;
-  --header-link: #383838;
-  --code-background: #E0E0E0;
-  --code-inline: #24292e;
-  --text-shadow: #3f3f3f;
-  --text: #262626;
-  --h1: #262626;
-  --h2: #262626;
-  --h3: #262626;
-  --h4: #262626;
-  --h5: #262626;
-  --h6: #262626;
+  --header-text: #553128;
+  --header-link: #F4A135;
+  --code-background: #F4A135;
+  --code-inline: #553128;
+  --text-shadow: #000000;
+  --text: #553128;
+  --h1: #000000;
+  --h2: #553128;
+  --h3: #F4A135;
+  --h4: #EB612E;
+  --h5: #F4A135;
+  --h6: #553128;
   --border: rgba(0, 0, 0, 0.2);
+  --company-name: #000000;
+  --slogan: #553128;
 }
 
 html[data-theme="dark"] {
@@ -57,7 +59,7 @@ html[data-theme="dark"] {
   --meta: #909dab; // meta
   --link: #00a8e0; // theme, link, link shadow header bg
   --header-background: #000000; // Color before header image load
-  --header-text: #e7f3f4; // header text, feature img text
+  --header-text: #553128; // header text, feature img text
   --header-link: #adbac7; // header link, search color
   --code-background: #2A3444;
   --code-inline: #d9b600;
@@ -77,22 +79,22 @@ html[data-theme="dark"] {
 /* BASE16 CODE HIGHLIGHT */
 // Material Theme
 html, html[data-theme="light"] {
-  --base00: #302f2d; // Default Background
-  --base01: #2e3c43; // Lighter Background (Used for status bars) - NOT USED
-  --base02: #314549; // Selection Background
-  --base03: #546e7a; // Comments, Invisible, Line Highlighting
-  --base04: #b2ccd6; // Dark Foreground (Used for status bars) - NOT USED
-  --base05: #eeffff; // Light Foreground (Not often used)
-  --base06: #eeffff; // Light Background (Not often used)
-  --base07: #ffffff; // Default Foreground, Default text color
-  --base08: #f07178; // Parenthesis, Caret, Delimiters, Operators
-  --base09: #f78c6c; // Classes, Markup Bold, Search Text Background
-  --base0a: #ffcb6b; // Strings, Inherited Class, Markup Code, Diff Inserted
-  --base0b: #98c379; // Functions, Methods, Attribute IDs, Headings
-  --base0c: #89ddff; // Support, Regular Expressions, Escape Characters, Markup Quotes
-  --base0d: #82aaff; // Keywords, Storage, Selector, Markup Italic, Diff Changed
-  --base0e: #c792ea; // Integers, Boolean, Constants, XML Attributes, Markup Link Url
-  --base0f: #ff5370; // Deprecated, Opening/Closing Embedded Language Tags e.g.
+  --base00: #000000;
+  --base01: #F4A135;
+  --base02: #EB612E;
+  --base03: #553128;
+  --base04: #FFF9D0;
+  --base05: #FFF9D0;
+  --base06: #FFF9D0;
+  --base07: #FFF9D0;
+  --base08: #EB612E;
+  --base09: #F4A135;
+  --base0a: #FFF9D0;
+  --base0b: #F4A135;
+  --base0c: #EB612E;
+  --base0d: #F4A135;
+  --base0e: #553128;
+  --base0f: #EB612E;
 }
 
 // Supernova Theme
