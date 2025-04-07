@@ -29,8 +29,9 @@ keybase:
 linkedin:
   pre: "https://www.linkedin.com/in/"
 mail:
-  pre: "mailto:"
+  pre: "/contact/"
   icon: "fas fa-envelope"
+  internal: true
 map:
   pre: "https://www.openstreetmap.org/#map=15/"
   icon: "fas fa-map-marked"

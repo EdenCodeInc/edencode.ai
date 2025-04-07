@@ -1,7 +1,7 @@
 /* TYPOGRAPHY */
 $font-family-main: 'Noto Sans', Helvetica, Arial, sans-serif;
 $font-family-headings: 'Noto Sans', Helvetica, Arial, sans-serif;
-$font-family-logo: 'Sofia Sans Condensed', Helvetica, Arial, sans-serif;
+$font-family-logo: 'Poppins', 'Montserrat', 'Raleway', 'Roboto', 'Open Sans', Helvetica, Arial, sans-serif;
 $font-size: clamp(15px, 2vw, 18px);
 
 $monospace: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif !default;
@@ -34,7 +34,7 @@ html, html[data-theme="light"] {
   --selection: #EB612E;
   --meta: #553128;
   --link: #EB612E;
-  --header-background: #000000;
+  --header-background: transparent;
   --header-text: #553128;
   --header-link: #F4A135;
   --code-background: #F4A135;
@@ -136,3 +136,12 @@ html[data-theme="dark"] {
 //  --base0e: #ae81ff; // Integers, Boolean, Constants, XML Attributes, Markup Link Url
 //  --base0f: #cc6633; // Deprecated, Opening/Closing Embedded Language Tags e.g.
 //}
+
+/* Font options for the company name:
+ * - Roboto: Modern, friendly, highly readable
+ * - Montserrat: Modern, geometric, professional
+ * - Raleway: Elegant, contemporary
+ * - Open Sans: Clean, highly readable
+ * - Lato: Balanced, serious
+ * - Poppins: Modern, geometric
+ */

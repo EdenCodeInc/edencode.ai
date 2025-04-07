@@ -39,6 +39,10 @@
     color: var(--header-link);
   }
 
+  a.site-title {
+    color: #553128; /* Make site title link black */
+  }
+
   .avatar {
     height: 3em;
     width: 3em;
@@ -52,9 +56,19 @@
 
   .site-title {
     float: left;
-    font-weight: bold;
+    font-weight: 700;
     font-family: $font-family-logo;
-    font-size: 1.3em;
+    font-size: 1.8em;
+    color: #553128;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        color: var(--link);
+        transform: translateY(-1px);
+    }
   }
 }
 

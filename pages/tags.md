@@ -2,8 +2,9 @@
 layout: tags
 title: Tags
 permalink: /tags/
+feature-img: "assets/img/figures/tags.png"
 icon: "fa-tags"
-#feature-img: "assets/img/figures/tags.png"
+hide: true
 redirect_from:
   - /tags.html
 ---

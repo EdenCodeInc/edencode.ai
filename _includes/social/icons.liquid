@@ -22,10 +22,9 @@
             {% assign icon = data.icon %}
         {% endif %}
         <li>
-            <a href="{{ data.pre | append: id | append: data.pos }}"
-               title="{{ site.data.language.str_follow_on }} {{ brand | remove: '-' | capitalize }}"
-               target="_blank"
-               rel="me">
+            <a href="{% if data.internal %}{{ data.pre | relative_url }}{% else %}{{ data.pre | append: id | append: data.pos }}{% endif %}"
+               title="{% if data.internal %}Contact Us{% else %}{{ site.data.language.str_follow_on }} {{ brand | remove: '-' | capitalize }}{% endif %}"
+               {% unless data.internal %}target="_blank" rel="me"{% endunless %}>
             <span class="fa-stack fa-lg">
               <i class="fas fa-circle fa-stack-2x"></i>
               <i class="{{ icon }} fa-stack-1x fa-inverse"></i>

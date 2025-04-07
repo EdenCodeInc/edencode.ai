@@ -4,22 +4,21 @@
         
     <!-- Theme Mode-->
     <script>
-        const darkBtn = "{{ site.data.language.str_dark | default: "Dark" }}"
-        const lightBtn = "{{ site.data.language.str_light | default: "Light" }}"
-        const isAutoTheme = {% if site.color_theme == 'auto' %}true{% else %}false{% endif %}
-        const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        if (isAutoTheme) {
-            document.documentElement.setAttribute('data-theme', sessionStorage.getItem('theme') ?? preferredTheme)
-        } else {
-            document.documentElement.setAttribute('data-theme', "{{ site.color_theme | default: 'light' }}")
-        }
+        // Always use light theme
+        document.documentElement.setAttribute('data-theme', 'light');
     </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
     <script defer src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
     <!--Favicon-->
     <link rel="shortcut icon" href="{{ site.favicon | relative_url }}" type="image/x-icon">
@@ -91,4 +90,59 @@
     <meta name="twitter:card" content="{% unless page.thumbnail %}summary{% else %}summary_large_image{% endunless %}">
     <meta name="twitter:image" content="{{ '/' | absolute_url }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}{{ page.feature-img | default: site.header_feature_image }}{% endif %}">
     <meta name="twitter:image:alt" content="{{ page.title | default: site.title }}">
+
+    <!-- Custom styles for this site -->
+    <style>
+        /* Ensure all background images properly fit the screen */
+        .feature-image header,
+        #main:not(.call-out),
+        [style*="background-image"]:not(.call-out_img) {
+            background-size: 80% auto !important; /* Scale to 80% width, auto height */
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+        }
+        
+        /* Home page specific styles */
+        .call-out,
+        .call-out_img,
+        #main.call-out {
+            background-size: 80% auto !important; /* Scale to 80% width, auto height */
+            background-repeat: no-repeat !important;
+            background-position: top center !important;
+            background-origin: content-box !important;
+            margin-top: -3.5em;
+            min-height: 60vh; /* Reduced height */
+            box-sizing: border-box;
+            padding-top: 3.5em;
+        }
+        
+        /* Make the call-out background properly fill the space */
+        .call-out_img {
+            background-color: transparent !important;
+        }
+        
+        /* Custom background color for the page body */
+        body {
+            background-color: var(--background);
+        }
+        
+        /* Fix for header positioning */
+        .site-header {
+            z-index: 100 !important; /* Ensure site header stays above everything */
+        }
+    </style>
+    
+    <!-- Disable theme switching -->
+    <script>
+        // Override any theme toggle functionality
+        window.themeToggle = function() { 
+            // Do nothing - always stay in light mode
+            return false;
+        };
+        
+        // Make sure we stay in light mode
+        document.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.setAttribute('data-theme', 'light');
+        });
+    </script>
 </head>
