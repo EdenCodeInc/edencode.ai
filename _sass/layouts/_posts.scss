@@ -83,6 +83,7 @@ header {
 /* --- Feature image --- */
 .feature-image {
   padding: 0;
+  position: relative; /* For positioning of children */
 
   .post-link {
     color: var(--header-text);
@@ -100,11 +101,31 @@ header {
     color: var(--header-text);
     margin-bottom: 0;
     padding: $padding-medium/2.5 $padding-medium;
+    min-height: 100vh; /* Full viewport height */
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important; /* Prevent tiling */
+    position: relative; /* For absolute positioning of children */
 
     .meta {
       color: var(--header-text);
       filter: opacity(0.7);
     }
+  }
+
+  /* Title overlay styling */
+  .title-padder {
+    position: absolute;
+    top: 100px; /* Distance from the top */
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(255, 249, 208, 0.7);
+    padding: 10px 20px;
+    margin: 0 auto;
+    max-width: 80%;
+    border-radius: 5px;
+    text-align: center;
   }
 
   .post-content {
@@ -124,18 +145,19 @@ header {
 
 /*-- feature-image Responsive scrolling --*/
 .feature-image header {
-  background-size: 100% auto;
+  background-size: contain;
+  background-position: center center !important;
 
   @media screen and (max-width: $break) {
-    background-size: 160% auto;
+    background-size: contain;
   }
 
   @media screen and (max-width: $sm-break) {
-    background-size: 280% auto;
+    background-size: contain;
   }
 
   @media screen and (max-width: $x-sm-break) {
-    background-size: 500% auto;
+    background-size: contain;
   }
 }
 
