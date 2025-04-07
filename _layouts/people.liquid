@@ -6,7 +6,9 @@ layout: page
 <h3>{{ section.role }}</h3>
 {% for member in section.members %}
 <div class="people">
-    <img class="people-photo" src="{{ site.baseurl }}{{ member.photo }}" alt="{{ member.name }}">
+    {% if member.photo %}
+        <img class="people-photo" src="{{ site.baseurl }}{{ member.photo }}" alt="{{ member.name }}">
+    {% endif %}
     <div class="people-info">
         <h4>
         {% if member.profile_link %}
